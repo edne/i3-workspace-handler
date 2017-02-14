@@ -34,7 +34,7 @@ bindsym Mod1+u            workspace back_and_forth
 List workspaces. As seen before we need to get the workspace names list in a
 dmenu-friendly way, but `i3-msg -t get_workspaces` prints a json.
 
-```
+```bash
 i3-msg -t get_workspaces |  # get the json
 tr , '\n' |                 # replace commas with newline
 grep name |                 # "name":"workspace-name"
@@ -44,7 +44,7 @@ cut -d \" -f 4              #         ^ 4th field, spliting by "
 If you have it already installed you can use
 [Jq](https://stedolan.github.io/jq/) to do the same job in a cleaner way:
 
-```
+```bash
 i3-msg -t get_workspaces | jq -r ".[].name"
 ```
 
