@@ -3,6 +3,8 @@
 Create i3 workspaces on the fly and switch (or move things) calling them by
 name.
 
+![dmenu screenshot](https://i.imgur.com/kiVHu64.png)
+
 Pressing `Mod+Space` (on my setup I press in sequence left and right thumbs) a
 dmenu with the list of current workspaces appears, allowing to choose one.
 Typing a non existing name a new one will be created.
