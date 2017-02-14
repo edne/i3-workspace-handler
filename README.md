@@ -41,6 +41,13 @@ grep name |                 # "name":"workspace-name"
 cut -d \" -f 4              #         ^ 4th field, spliting by "
 ```
 
+If you have it already installed you can use
+[Jq](https://stedolan.github.io/jq/) to do the same job in a cleaner way:
+
+```
+i3-msg -t get_workspaces | jq -r ".[].name"
+```
+
 ## License
 
 Licensed under the Beerware License:
