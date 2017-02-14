@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# List workspaces in a dmenu friendly way
+i3-msg -t get_workspaces |  # get the json
+tr , '\n' |                 # replace commas with newline
+grep name |                 # "name":"workspace-name"
+cut -d \" -f 4              #         ^ 4th field, spliting by "
+
