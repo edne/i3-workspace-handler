@@ -19,9 +19,9 @@ selected container.
 
 - Add these lines in your `.i3/config`:
  ```
-bindsym Mod1+space        exec i3-msg workspace $(lsws | dmenu -p "→")
-bindsym Mod1+Shift+space  exec i3-msg move container to workspace $(lsws | dmenu -p "|→")
-bindsym Mod1+u            workspace back_and_forth
+bindsym $mod+space        exec i3-msg workspace $(lsws | dmenu -p "→")
+bindsym $mod+Shift+space  exec i3-msg move container to workspace $(lsws | dmenu -p "|→")
+bindsym $mod+u            workspace back_and_forth
 ```
   Eventually changing them with your Mod key and your colors and font
   configuration.
